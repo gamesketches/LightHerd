@@ -73,7 +73,7 @@ public class CreatureMovement: MonoBehaviour
 	private void CreatureMovementTarget()
 	{
 		if(LightController._instance.LightColorName() == thisObject.name ||
-			LightController._instance.LightColorName() == "White")
+			LightController._instance.LightColorName() == "Default")
 		{
 			targetTransform.position = new Vector3(creatureTransform.position.x + 
 													Mathf.Cos(Mathf.Atan2(LightController._instance.LightPosition().y - creatureTransform.position.y, 

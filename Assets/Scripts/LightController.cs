@@ -10,7 +10,7 @@ public class LightController : MonoBehaviour
 	private Transform thisObject;
 
 	//Light Color
-	private enum LIGHTCOLOR{ White, Purple, Yellow };
+	private enum LIGHTCOLOR{ Default, Purple, Yellow };
 	private int currentColor;
 	private string colorName;
 	private Color32 lightColor;
@@ -32,8 +32,8 @@ public class LightController : MonoBehaviour
 	void Start () 
 	{
 		thisObject = this.transform;
-		currentColor = (int)LIGHTCOLOR.White;
-		colorName = LIGHTCOLOR.White.ToString();
+		currentColor = (int)LIGHTCOLOR.Default;
+		colorName = LIGHTCOLOR.Default.ToString();
 		lightColor = new Color32 (255, 255, 255, 255);
 
 		moveSpeed = 0.03f;
@@ -82,7 +82,7 @@ public class LightController : MonoBehaviour
 		{
 		case 0:
 			lightColor = new Color32 (255, 255, 255, 255);
-			colorName = LIGHTCOLOR.White.ToString ();
+			colorName = LIGHTCOLOR.Default.ToString ();
 	//		Debug.Log (colorName);
 			break;
 		case 1:
@@ -95,7 +95,7 @@ public class LightController : MonoBehaviour
 			break;
 		default:
 			lightColor = new Color32 (255, 255, 255, 255);
-			colorName = LIGHTCOLOR.White.ToString();
+			colorName = LIGHTCOLOR.Default.ToString();
 			break;
 		}
 		thisObject.gameObject.GetComponent<SpriteRenderer> ().color = lightColor;
