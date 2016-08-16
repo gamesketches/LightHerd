@@ -1,0 +1,238 @@
+fileFormatVersion: 2
+guid: 0c0f6029129e82c4f9f11e2459822db9
+timeCreated: 1471304555
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Creature_0
+    21300002: Creature_1
+    21300004: Creature_2
+    21300006: Creature_3
+    21300008: Creature_4
+    21300010: Creature_5
+    21300012: Creature_6
+    21300014: Creature_7
+    21300016: Creature_8
+    21300018: Creature_9
+    21300020: Creature_10
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Creature_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 62}
+        - {x: -29, y: 54}
+        - {x: -29, y: 9}
+        - {x: -16, y: -63}
+        - {x: -6, y: -48}
+        - {x: 1, y: -23}
+        - {x: 5, y: 4}
+        - {x: 5, y: 13}
+        - {x: 1, y: 17}
+        - {x: -1, y: 18}
+        - {x: 3, y: 16}
+        - {x: 7, y: 15}
+        - {x: 5, y: 6}
+        - {x: 5, y: -12}
+        - {x: 2, y: -64}
+        - {x: 23, y: -64}
+        - {x: 32, y: -45}
+        - {x: 32, y: 52}
+        - {x: 27, y: 62}
+    - name: Creature_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: -57}
+        - {x: 9, y: -60}
+        - {x: 6, y: -63}
+        - {x: 6, y: -64}
+        - {x: 20, y: -64}
+        - {x: 20, y: -58}
+        - {x: 18, y: -57}
+      - - {x: -6, y: 62}
+        - {x: -23, y: 56}
+        - {x: -25, y: 39}
+        - {x: -25, y: 24}
+        - {x: -19, y: 20}
+        - {x: -10, y: 20}
+        - {x: 0, y: 21}
+        - {x: 4, y: 19}
+        - {x: -3, y: 20}
+        - {x: -7, y: 20}
+        - {x: -9, y: 18}
+        - {x: -25, y: 8}
+        - {x: -25, y: -41}
+        - {x: -19, y: -57}
+        - {x: 16, y: -57}
+        - {x: 20, y: -55}
+        - {x: 32, y: -48}
+        - {x: 32, y: 62}
+      - - {x: -32, y: 35}
+        - {x: -32, y: 20}
+        - {x: -29, y: 21}
+        - {x: -28, y: 24}
+        - {x: -28, y: 31}
+        - {x: -30, y: 35}
+    - name: Creature_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 62}
+        - {x: -24, y: 46}
+        - {x: -24, y: -13}
+        - {x: -21, y: -19}
+        - {x: 16, y: -51}
+        - {x: 32, y: -51}
+        - {x: 32, y: 54}
+        - {x: 31, y: 62}
+    - name: Creature_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 27, y: -46}
+        - {x: 27, y: -49}
+        - {x: 29, y: -51}
+        - {x: 32, y: -50}
+        - {x: 32, y: -43}
+        - {x: 30, y: -43}
+      - - {x: 15, y: 61}
+        - {x: -24, y: 61}
+        - {x: -24, y: -26}
+        - {x: 8, y: -40}
+        - {x: 12, y: -38}
+        - {x: 27, y: -43}
+        - {x: 32, y: -43}
+        - {x: 32, y: 16}
+        - {x: 26, y: 58}
+    - name: Creature_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 49}
+        - {x: -12, y: 49}
+        - {x: -23, y: 37}
+        - {x: -24, y: 33}
+        - {x: -24, y: -15}
+        - {x: -17, y: -35}
+        - {x: -9, y: -27}
+        - {x: -4, y: -9}
+        - {x: -4, y: -6}
+        - {x: -5, y: -2}
+        - {x: -4, y: -3}
+        - {x: -4, y: -7}
+        - {x: -3, y: -24}
+        - {x: -6, y: -37}
+        - {x: -5, y: -39}
+        - {x: 0, y: -39}
+        - {x: 17, y: -23}
+        - {x: 18, y: -10}
+        - {x: 18, y: 41}
+        - {x: 15, y: 46}
+    - name: Creature_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 48}
+        - {x: -28, y: 48}
+        - {x: -28, y: -29}
+        - {x: -22, y: -28}
+        - {x: -15, y: -17}
+        - {x: -18, y: -30}
+        - {x: -15, y: -37}
+        - {x: -8, y: -37}
+        - {x: 0, y: -24}
+        - {x: 14, y: 0}
+        - {x: 14, y: 38}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

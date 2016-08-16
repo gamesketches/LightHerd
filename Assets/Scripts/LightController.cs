@@ -36,7 +36,7 @@ public class LightController : MonoBehaviour
 		colorName = LIGHTCOLOR.White.ToString();
 		lightColor = new Color32 (255, 255, 255, 255);
 
-		moveSpeed = 0.05f;
+		moveSpeed = 0.03f;
 		extraSpeed = 0.0f;
 		moveDirection = 1;
 		moveRadius = -3;
@@ -47,6 +47,7 @@ public class LightController : MonoBehaviour
 	{	
 		timeController++;
 		LightMovement ();
+		ChooseColor (choice);
 	}
 
 
