@@ -25,7 +25,7 @@ public class CreatureMovement: MonoBehaviour
 		lineRender = this.gameObject.GetComponent<LineRenderer>();
 		vertexCount = 2;
 		lineRender.SetVertexCount (vertexCount);
-		moveSpeed = 0.5f;
+		moveSpeed = 1.0f;
 
 		creatureTransform  = this.transform.FindChild("Creature");
 		targetTransform = creatureTransform;
@@ -72,7 +72,7 @@ public class CreatureMovement: MonoBehaviour
 
 	private void CreatureMovementTarget()
 	{
-		if(LightController._instance.LightColorName() == thisObject.name ||
+		if(LightController._instance.LightColorName() == colorName ||
 			LightController._instance.LightColorName() == "Default")
 		{
 			targetTransform.position = new Vector3(creatureTransform.position.x + 

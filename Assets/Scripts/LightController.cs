@@ -5,7 +5,7 @@ public class LightController : MonoBehaviour
 {
 	public static LightController _instance;
 
-	public int choice;
+	//public int choice;
 
 	private Transform thisObject;
 
@@ -66,11 +66,8 @@ public class LightController : MonoBehaviour
 		{
 			extraSpeed = 0;
 		}
-
 			
 		thisObject.RotateAround(new Vector3(0,-300,0), new Vector3(0, 0, moveRadius), (moveSpeed + extraSpeed) * moveDirection);
-	
-	
 	}
 
 
