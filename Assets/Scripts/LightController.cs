@@ -47,7 +47,6 @@ public class LightController : MonoBehaviour
 	{	
 		timeController++;
 		LightMovement ();
-		ChooseColor (choice);
 	}
 
 
