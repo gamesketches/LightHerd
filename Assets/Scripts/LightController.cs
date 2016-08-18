@@ -7,7 +7,8 @@ public class LightController : MonoBehaviour
 
 	//public int choice;
 
-	private Transform thisObject;
+	private Transform thisTransform;
+	private Transform lightTransform;
 
 	//Light Color
 	private enum LIGHTCOLOR{ Default, Purple, Yellow };
@@ -31,7 +32,9 @@ public class LightController : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		thisObject = this.transform;
+		thisTransform = this.transform;
+		lightTransform = this.transform.FindChild ("Spotlight");
+
 		currentColor = (int)LIGHTCOLOR.Default;
 		colorName = LIGHTCOLOR.Default.ToString();
 		lightColor = new Color32 (255, 255, 255, 255);
@@ -67,7 +70,7 @@ public class LightController : MonoBehaviour
 			extraSpeed = 0;
 		}
 			
-		thisObject.RotateAround(new Vector3(0,-300,0), new Vector3(0, 0, moveRadius), (moveSpeed + extraSpeed) * moveDirection);
+		thisTransform.RotateAround(new Vector3(0,-300,0), new Vector3(0, 0, moveRadius), (moveSpeed + extraSpeed) * moveDirection);
 	}
 
 
@@ -86,7 +89,7 @@ public class LightController : MonoBehaviour
 			colorName =  LIGHTCOLOR.Purple.ToString();
 			break;
 		case 2:
-			lightColor = new Color32 (120, 128, 45, 255);
+			lightColor = new Color32 (211, 218, 154, 255);
 			colorName = LIGHTCOLOR.Yellow.ToString();
 			break;
 		default:
@@ -94,7 +97,8 @@ public class LightController : MonoBehaviour
 			colorName = LIGHTCOLOR.Default.ToString();
 			break;
 		}
-		thisObject.gameObject.GetComponent<SpriteRenderer> ().color = lightColor;
+		thisTransform.gameObject.GetComponent<SpriteRenderer> ().color = lightColor;
+		lightTransform.gameObject.GetComponent<Light> ().color = lightColor;
 	}
 
 	public string LightColorName()
@@ -105,6 +109,6 @@ public class LightController : MonoBehaviour
 
 	public Vector3 LightPosition()
 	{
-		return thisObject.position;
+		return thisTransform.position;
 	}
 }
