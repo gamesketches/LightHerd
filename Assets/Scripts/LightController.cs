@@ -10,6 +10,7 @@ public class LightController : MonoBehaviour
 	private Transform lightTransform;
 
 	//Light Color
+
 	private enum LIGHTCOLOR{ Default, Purple, Yellow };
 	private int currentColor;
 	private string colorName;
@@ -64,18 +65,23 @@ public class LightController : MonoBehaviour
 		CheckWin();
 	}
 
-	private void CheckToggles() {
-		if(purpleToggle.isOn && yellowToggle.isOn) {
+	private void CheckToggles()
+	{
+		if(purpleToggle.isOn && yellowToggle.isOn)
+		{
 			// This is where we'd combine colors
 			ChooseColor(0);
 		}
-		else if(purpleToggle.isOn) {
+		else if(purpleToggle.isOn)
+		{
 			ChooseColor(1);
 		}
-		else if(yellowToggle.isOn) {
+		else if(yellowToggle.isOn)
+		{
 			ChooseColor(2);
 		}
-		else {
+		else 
+		{
 			ChooseColor(0);
 		}
 	}
@@ -140,9 +146,12 @@ public class LightController : MonoBehaviour
 		return thisTransform.position;
 	}
 
-	void CheckWin() {
-		foreach(GoalScript goal in goals) {
-			if(!goal.winner) {
+	void CheckWin() 
+	{
+		foreach(GoalScript goal in goals)
+		{
+			if(!goal.winner) 
+			{
 				return;
 			}
 		}

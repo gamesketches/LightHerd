@@ -64,7 +64,7 @@ public class CreatureMovement: MonoBehaviour
 			timeController = 0;
 
 		}
-		creatureTransform.position = Vector3.Lerp (creatureTransform.position, targetTransform.position , 1);
+		creatureTransform.position = Vector3.Lerp (creatureTransform.position, targetTransform.position, 1);
 		//Debug.Log (endTarget.position);
 		lineRender.SetPosition (vertexCount - 1, creatureTransform.position);
 
