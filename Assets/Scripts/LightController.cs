@@ -16,6 +16,7 @@ public class LightController : MonoBehaviour
 	private Color32 lightColor;
 	private Toggle purpleToggle;
 	private Toggle yellowToggle;
+	private GoalScript[] goals;
 	//LightMovement
 	private float moveSpeed;
 	private float extraSpeed;
@@ -49,6 +50,10 @@ public class LightController : MonoBehaviour
 		GameObject[] toggles = GameObject.FindGameObjectsWithTag("toggle");
 		purpleToggle = toggles[0].GetComponent<Toggle>();
 		yellowToggle = toggles[1].GetComponent<Toggle>();
+		GameObject[] temp = GameObject.FindGameObjectsWithTag("goal");
+		goals = new GoalScript[temp.Length];
+		goals[0] = temp[0].GetComponent<GoalScript>();
+		goals[1] = temp[1].GetComponent<GoalScript>();
 	}
 
 	void Update()
@@ -56,6 +61,7 @@ public class LightController : MonoBehaviour
 		CheckToggles();
 		timeController++;
 		LightMovement ();
+		CheckWin();
 	}
 
 	private void CheckToggles() {
@@ -132,5 +138,16 @@ public class LightController : MonoBehaviour
 	public Vector3 LightPosition()
 	{
 		return thisTransform.position;
+	}
+
+	void CheckWin() {
+		foreach(GoalScript goal in goals) {
+			if(!goal.winner) {
+				return;
+			}
+		}
+
+		Debug.Log("You win!");
+		Debug.Break();
 	}
 }
