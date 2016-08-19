@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class LightController : MonoBehaviour 
 {
 	public static LightController _instance;
-
-	//public int choice;
 
 	private Transform thisTransform;
 	private Transform lightTransform;
@@ -15,6 +14,8 @@ public class LightController : MonoBehaviour
 	private int currentColor;
 	private string colorName;
 	private Color32 lightColor;
+	private Toggle purpleToggle;
+	private Toggle yellowToggle;
 	//LightMovement
 	private float moveSpeed;
 	private float extraSpeed;
@@ -44,12 +45,33 @@ public class LightController : MonoBehaviour
 		moveDirection = 1;
 		moveRadius = -3;
 		pressController = 0;
+
+		GameObject[] toggles = GameObject.FindGameObjectsWithTag("toggle");
+		purpleToggle = toggles[0].GetComponent<Toggle>();
+		yellowToggle = toggles[1].GetComponent<Toggle>();
 	}
 
 	void Update()
 	{	
+		CheckToggles();
 		timeController++;
 		LightMovement ();
+	}
+
+	private void CheckToggles() {
+		if(purpleToggle.isOn && yellowToggle.isOn) {
+			// This is where we'd combine colors
+			ChooseColor(0);
+		}
+		else if(purpleToggle.isOn) {
+			ChooseColor(1);
+		}
+		else if(yellowToggle.isOn) {
+			ChooseColor(2);
+		}
+		else {
+			ChooseColor(0);
+		}
 	}
 
 
