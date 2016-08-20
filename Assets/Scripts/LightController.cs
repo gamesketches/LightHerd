@@ -48,9 +48,8 @@ public class LightController : MonoBehaviour
 		moveRadius = -3;
 		pressController = 0;
 
-		GameObject[] toggles = GameObject.FindGameObjectsWithTag("toggle");
-		purpleToggle = toggles[0].GetComponent<Toggle>();
-		yellowToggle = toggles[1].GetComponent<Toggle>();
+		purpleToggle = this.transform.root.FindChild("Canvas").GetChild(0).GetComponent<Toggle>();
+		yellowToggle = this.transform.root.FindChild("Canvas").GetChild(1).GetComponent<Toggle>();
 		GameObject[] temp = GameObject.FindGameObjectsWithTag("goal");
 		goals = new GoalScript[temp.Length];
 		goals[0] = temp[0].GetComponent<GoalScript>();
