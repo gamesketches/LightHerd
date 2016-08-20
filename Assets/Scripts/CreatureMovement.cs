@@ -114,11 +114,11 @@ public class CreatureMovement: MonoBehaviour
 				currentEndWidth -= 0.1f;
 			}
 			targetTransform.position = new Vector3(creatureTransform.position.x + 
-				Mathf.Cos(Mathf.Atan2(LightController._instance.LightPosition().y - creatureTransform.position.y, 
-					LightController._instance.LightPosition().x - creatureTransform.position.x)) * moveSpeed * 0.6f,
-				creatureTransform.position.y - 
-				Mathf.Sin(Mathf.Atan2( LightController._instance.LightPosition().y - creatureTransform.position.y, 
-					LightController._instance.LightPosition().x - creatureTransform.position.x) )* moveSpeed * 0.6f,0);
+													Mathf.Cos(Mathf.Atan2(LightController._instance.LightPosition().y - creatureTransform.position.y, 
+																LightController._instance.LightPosition().x - creatureTransform.position.x)) * moveSpeed,
+												   creatureTransform.position.y +
+													Mathf.Sin(Mathf.Atan2( LightController._instance.LightPosition().y - creatureTransform.position.y, 
+																LightController._instance.LightPosition().x - creatureTransform.position.x) )* moveSpeed * 0.05f, 0);
 			
 		}
 
