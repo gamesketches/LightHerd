@@ -77,6 +77,7 @@ public class CreatureMovement: MonoBehaviour
 		lineRender.SetWidth (defaultStartWidth, currentEndWidth);
 		//Debug.Log (endTarget.position);
 		lineRender.SetPosition (vertexCount - 1, creatureTransform.position);
+		colorName = thisObject.name;
 
 	}
 
