@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 8eba27f2d9b894a38aecce004e2256c9
+timeCreated: 1472278258
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: obstacleLightHerd_0
+    21300002: obstacleLightHerd_1
+    21300004: obstacleLightHerd_2
+    21300006: obstacleLightHerd_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 600
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: obstacleLightHerd_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: obstacleLightHerd_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 152
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39, y: 75}
+        - {x: -76, y: 33}
+        - {x: -76, y: -53}
+        - {x: -69, y: -75}
+        - {x: 55, y: -75}
+        - {x: 76, y: -59}
+        - {x: 76, y: 58}
+        - {x: 67, y: 75}
+      - - {x: 72, y: -52}
+        - {x: 72, y: -75}
+        - {x: 76, y: -75}
+        - {x: 76, y: -51}
+        - {x: 74, y: -51}
+      - - {x: -62, y: -44}
+        - {x: -13, y: 67}
+        - {x: -8, y: 68}
+        - {x: -7, y: 69}
+        - {x: -8, y: 68}
+        - {x: -5, y: 63}
+        - {x: 6, y: 64}
+        - {x: -22, y: -12}
+        - {x: -16, y: -25}
+      - - {x: -76, y: -52}
+        - {x: -76, y: -64}
+        - {x: -73, y: -63}
+        - {x: -70, y: -57}
+        - {x: -70, y: -54}
+        - {x: -72, y: -52}
+    - name: obstacleLightHerd_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 9
+        width: 5
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: obstacleLightHerd_3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 2
+        width: 148
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33, y: 74}
+        - {x: -69, y: 27}
+        - {x: -74, y: 7}
+        - {x: -74, y: -53}
+        - {x: -34, y: -74}
+        - {x: 51, y: -74}
+        - {x: 74, y: -60}
+        - {x: 74, y: 74}
+      - - {x: -60, y: -43}
+        - {x: -12, y: 67}
+        - {x: -7, y: 68}
+        - {x: -6, y: 69}
+        - {x: -7, y: 68}
+        - {x: -4, y: 63}
+        - {x: 7, y: 64}
+        - {x: -28, y: -7}
+        - {x: -22, y: -20}
+        - {x: 2, y: -47}
+        - {x: 14, y: -48}
+        - {x: 51, y: -46}
+        - {x: 53, y: -46}
+        - {x: 57, y: -43}
+        - {x: 57, y: -41}
+        - {x: 53, y: -45}
+        - {x: 51, y: -50}
+        - {x: 20, y: -65}
+      - - {x: -74, y: -52}
+        - {x: -74, y: -62}
+        - {x: -70, y: -61}
+        - {x: -69, y: -57}
+        - {x: -69, y: -53}
+        - {x: -71, y: -52}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
