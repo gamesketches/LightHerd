@@ -20,7 +20,8 @@ public class CreatureMovement: MonoBehaviour
 	//Direction
 	private int priorAngle;
 	private int currentAngle;
-
+	//Goback
+	private float goBackProgress;
 
 	private int timeController;
 
@@ -35,7 +36,7 @@ public class CreatureMovement: MonoBehaviour
 		defaultStartWidth = (int)Random.Range (5, 15);
 		defaultEndWidth = defaultStartWidth - 3;
 		currentEndWidth = defaultEndWidth;
-		maxEndWidth = defaultEndWidth * 10;
+		maxEndWidth = defaultEndWidth * 6;
 
 		creatureTransform  = this.transform.FindChild("Creature");
 		targetTransform = creatureTransform;
@@ -44,6 +45,7 @@ public class CreatureMovement: MonoBehaviour
 		priorAngle = 0;
 		currentAngle = 0;
 
+		goBackProgress = 0.1f;
 		timeController = 0;
 
 		thisObject.position = creatureTransform.position;
@@ -56,7 +58,7 @@ public class CreatureMovement: MonoBehaviour
 	void Update () 
 	{
 		timeController++;
-	
+
 		if(timeController % 3 == 0)
 		{
 			if (thisObject.position.x < 1600 && thisObject.position.y < 1600) 
@@ -83,8 +85,22 @@ public class CreatureMovement: MonoBehaviour
 
 	}
 
-	public void resetPosition() {
-		creatureTransform.position = startingPosition;
+	public void resetPosition()
+	{
+		StartCoroutine ("GoBack");
+	}
+
+	IEnumerator GoBack()
+	{
+		while (goBackProgress < 1)
+		{
+			creatureTransform.position = Vector3.Lerp (creatureTransform.position, startingPosition, goBackProgress);
+			goBackProgress *= 1.01f;
+			yield return null;
+		}
+		lineRender.SetWidth (defaultStartWidth,defaultStartWidth);
+		goBackProgress = 0.1f;
+		yield break;
 	}
 
 	private void CreatureMovementTarget()
