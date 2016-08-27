@@ -145,6 +145,7 @@ public class LightController : MonoBehaviour
 
 	public string LightColorName()
 	{
+		Debug.Log (colorName);
 		return colorName;
 	}
 

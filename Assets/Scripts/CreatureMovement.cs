@@ -6,7 +6,6 @@ public class CreatureMovement: MonoBehaviour
 	//Line
 	private Transform thisObject;
 	private LineRenderer lineRender;
-	private Vector3 startingPosition;
 	private int vertexCount;
 	private float moveSpeed;
 	private int defaultStartWidth;
@@ -27,7 +26,6 @@ public class CreatureMovement: MonoBehaviour
 	void Start () 
 	{
 		thisObject = this.transform;
-		startingPosition = thisObject.position;
 		lineRender = this.gameObject.GetComponent<LineRenderer>();
 		vertexCount = 2;
 		lineRender.SetVertexCount (vertexCount);
@@ -75,7 +73,7 @@ public class CreatureMovement: MonoBehaviour
 			timeController = 0;
 
 		}
-		creatureTransform.position = Vector3.Lerp (creatureTransform.position, targetTransform.position, .1f);
+		creatureTransform.position = Vector3.Lerp (creatureTransform.position, targetTransform.position, 1);
 		lineRender.SetWidth (defaultStartWidth, currentEndWidth);
 		//Debug.Log (endTarget.position);
 		lineRender.SetPosition (vertexCount - 1, creatureTransform.position);
@@ -83,15 +81,10 @@ public class CreatureMovement: MonoBehaviour
 
 	}
 
-	public void resetPosition() {
-		creatureTransform.position = startingPosition;
-	}
-
 	private void CreatureMovementTarget()
 	{
 		if(LightController._instance.LightColorName() == "Default")
 		{
-			moveSpeed = 0.0f;
 			targetTransform.position = new Vector3(creatureTransform.position.x + 
 													Mathf.Cos(Mathf.Atan2(LightController._instance.LightPosition().y - creatureTransform.position.y, 
 																LightController._instance.LightPosition().x - creatureTransform.position.x)) * moveSpeed,
@@ -105,7 +98,6 @@ public class CreatureMovement: MonoBehaviour
 			{
 				currentEndWidth += 0.1f;
 			}
-			moveSpeed = 1.0f;
 			targetTransform.position = new Vector3(creatureTransform.position.x + 
 													Mathf.Cos(Mathf.Atan2(LightController._instance.LightPosition().y - creatureTransform.position.y, 
 																LightController._instance.LightPosition().x - creatureTransform.position.x)) * moveSpeed,
@@ -122,7 +114,6 @@ public class CreatureMovement: MonoBehaviour
 				
 				currentEndWidth -= 0.1f;
 			}
-			moveSpeed = -0.5f;
 			targetTransform.position = new Vector3(creatureTransform.position.x + 
 													Mathf.Cos(Mathf.Atan2(LightController._instance.LightPosition().y - creatureTransform.position.y, 
 																LightController._instance.LightPosition().x - creatureTransform.position.x)) * moveSpeed,

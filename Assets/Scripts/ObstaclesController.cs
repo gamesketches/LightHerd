@@ -4,16 +4,16 @@ using System.Collections;
 public class ObstaclesController : MonoBehaviour
 {
 	private Transform thisTransform;
-	private GameObject[] obstaclesTransform;
+	private Transform[] obstaclesTransform = new Transform[100];
 
 	// Use this for initialization
 	void Start () 
 	{
 		thisTransform = this.transform;
-		obstaclesTransform = GameObject.FindGameObjectsWithTag("obstacle");
-
-		foreach(GameObject obj in obstaclesTransform){
-			obj.SetActive (false);
+		for (int i = 0; i < thisTransform.childCount; i++) 
+		{
+			obstaclesTransform [i] = thisTransform.GetChild (i);
+			obstaclesTransform [i].gameObject.SetActive (false);
 		}
 	
 	}
@@ -26,11 +26,11 @@ public class ObstaclesController : MonoBehaviour
 			if (LightController._instance.LightColorName() == obstaclesTransform [i].name || 
 				LightController._instance.LightColorName() == "Default") 
 			{
-				obstaclesTransform [i].SetActive (false);
+				obstaclesTransform [i].gameObject.SetActive (false);
 			}
 			else
 			{
-				obstaclesTransform [i].SetActive (true);
+				obstaclesTransform [i].gameObject.SetActive (true);
 			}
 		}
 
